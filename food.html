@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
+    <script src="script.js"></script>
     <title>Max</title>
     <style>
         body, html{
@@ -21,7 +22,6 @@
 </head>
 
 <body>
-    <h1><?php echo "This message is from server side." ?></h1>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -52,27 +52,101 @@
       </nav>        
     </div>
     <br />
-    <div class = "rcorners2">
+    <div class = "rcorners2" onmouseover="showRev()">
         <div class = "revTitle">
-        <p> RESTURANT NAME</p>
+        <p> Balthazar</p>
         </div>
         <div id = "starAl">
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
         </div>
         <div class = "foodRev">
-        <p><?php
-            $text = "this is a long string of text that we need to snip";
-            $sniplength = 15;
-            echo substr($text,0,$sniplength)."...";
-            ?></p>
+          <p class = "revp" id = "f1" onmouseover="showRev1()"></p>
+          <script type="text/javascript">
+            loadRev(1,"f1");
+          </script>
         </div>
-        
-        
     </div>
+
+    <div class = "rcorners2">
+      <div class = "revTitle">
+      <p> Meat and Co</p>
+      </div>
+      <div id = "starAl">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      </div>
+      <div class = "foodRev">
+        <p class = "revp" id = "f2" onmouseover="showRev2()"></p>
+        <script type="text/javascript">
+          loadRev(2,"f2");
+        </script>
+      </div>
+  </div>
+
+  <div class = "rcorners2">
+    <div class = "revTitle">
+    <p>Epicurian</p>
+    </div>
+    <div id = "starAl">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </div>
+    <div class = "foodRev">
+      <p class = "revp" id = "f3" onmouseover="showRev3()"></p>
+      <script type="text/javascript">
+        loadRev(3,"f3");
+      </script>
+    </div>
+</div>
+
+<div class = "rcorners2">
+  <div class = "revTitle">
+  <p> Friends</p>
+  </div>
+  <div id = "starAl">
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  </div>
+  <div class = "foodRev">
+    <p class = "revp" id = "f4" onmouseover="showRev4()"></p>
+    <script type="text/javascript">
+      loadRev(4,"f4");
+    </script>
+  </div>
+</div>
+
+<div class = "rcorners2">
+  <div class = "revTitle">
+  <p> Red Cabbage</p>
+  </div>
+  <div id = "starAl">
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  </div>
+  <div class = "foodRev">
+    <p class = "revp" id = "f5" onmouseover="showRev5()"></p>
+    <script type="text/javascript">
+      loadRev(5,"f5");
+    </script>
+  </div>
+</div>
+
 
 </body>
 </html>
