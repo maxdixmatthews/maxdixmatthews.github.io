@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+body, html{
+    font-family:'Josefin Sans', sans-serif;
+    color: #363636;
+    /* background: #eeee; */
+    font-weight: 300;
+}
+.HTMLPage1{
+    background-color: grey;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.navBar{
+    background-color: rgba(30, 139, 195, 0.9)
+}
+
+.navBar a {
+    float: center;
+    color: rgba(141, 182, 0, 1);
+    text-align: center;
+    padding: auto;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+a:link {
+    color: honeydew;
+}
+a:visited{
+    color:honeydew;
+}
+a:hover{
+    color:black;
+}
+
+header{
+    text-align: center;
+}
+
+.left{
+    font-family:'Josefin Sans', sans-serif;
+    text-indent: 35%;
+    font-weight: bold;
+}
+
+header h1{
+    
+    margin: 5px auto;
+    text-align: center;
+}
+
+/* ul{
+    list-style-type: none;
+    font-family: "Open Sans Condensed";
+    color: #FF0000;
+    padding: 1px;
+    margin: 1px;
+    text-align: center; */
+/* } */
+.built{
+    width: 60%;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-facebook {    
+    background: #3B5998;
+    color: white;
+    margin-left:45%;
+    align-items: center;
+
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 55%;
+
+  }
+#m2{
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+.fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 30px;
+    text-decoration: none;
+    align-items: center;
+  }
+.fa:hover{
+    opacity: 0.7;
+}
+
+#iniP{
+    position:relative;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 30px;
+}
+
+#contL{
+    list-style-type: none;
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    width:100%;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+
+/* .para{
+    text-align: center;
+    font-size: large;
+    color:ghostwhite;
+} */
+
+/* .col-m-4{
+    background-color: rgba(255,255,255,0.5);
+} */
