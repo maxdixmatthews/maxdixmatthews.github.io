@@ -14,13 +14,14 @@
     <title>Max</title>
     <style>
         body, html{
-            background-color: grey;
+            background-color: white;
     }
     </style>
 
 </head>
 
 <body>
+    <h1><?php echo "This message is from server side." ?></h1>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -51,7 +52,27 @@
       </nav>        
     </div>
     <br />
-    <p class = "para"> Something new
-    </p>
+    <div class = "rcorners2">
+        <div class = "revTitle">
+        <p> RESTURANT NAME</p>
+        </div>
+        <div id = "starAl">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        </div>
+        <div class = "foodRev">
+        <p><?php
+            $text = "this is a long string of text that we need to snip";
+            $sniplength = 15;
+            echo substr($text,0,$sniplength)."...";
+            ?></p>
+        </div>
+        
+        
+    </div>
+
 </body>
 </html>
