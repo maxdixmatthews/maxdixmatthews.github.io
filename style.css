@@ -130,12 +130,60 @@ header h1{
     height: 75px;
 }
 
-/* .para{
+.para{
     text-align: center;
     font-size: large;
     color:ghostwhite;
-} */
+}
 
+.rcorners2{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    height: 150px;
+  }
+
+.revTitle{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    align-items: left;
+    display:inline-block;
+    width: 300px;
+    margin: auto;
+}
+
+.titleStars{
+    text-align: left;
+    align-items: left;
+}
+
+.foodRev{
+    font-size: 10px;
+    color: black;
+}
+
+.checked {
+    color: orange;
+}
+
+.fa-star{
+    align-items: left;
+    margin: auto;
+}
+
+#starAl{
+    display:inline-block;
+    font-weight: bold;
+    font-size: 25px;
+}
 /* .col-m-4{
     background-color: rgba(255,255,255,0.5);
 } */
