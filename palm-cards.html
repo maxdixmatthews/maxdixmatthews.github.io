@@ -11,16 +11,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
+    <script src="script.js"></script>
+    <!-- <script>        
+        function showCreateCardBox() {
+            let createBox = document.getElementById("create-box");
+            createBox.style.display = "none";
+        }
+    </script> -->
+    
+
     <title>Max</title>
-    <style>
+    <!-- <style>
         body, html{
-            background-color: #330000;
+            background-color: grey;
     }
-    </style>
+    </style> -->
 
 </head>
 
-<body>
+<body onload="oldWords()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -51,8 +60,37 @@
       </nav>        
     </div>
     <br />
-    <p class = "para">
-        Max
-    </p>
+    <header>
+        <div class="container">
+          <div id="nav">
+            <h1>Flashcards</h1>
+            <div>
+              <button id="show_card_box" onclick="showCreateCardBox()">Add Card</button>
+              <button id="delete_cards" onclick="delFlashCards()">Del Cards</button>
+            </div>
+          </div>
+        </div>
+    </header>
+      
+    <div class="container">
+        <div id="create-box">
+        <h2 >Create Flashcard</h2>
+        <label for="question">Question</label>
+        <textarea id="question" maxlength="280"></textarea>
+        <br>
+        <label for="answer" maxlength="280">Answer</label>
+        <textarea id="answer"></textarea>
+        <div>
+            <button id="save_card" onclick="addFlashcard()">Save</button> <button id="close_card_box" onclick="hideCreateBox()">Close</button>
+        </div>
+        </div>
+    </div>
+
+  
+      <section>
+        <div class="container">
+          <div id="flashcards"></div>
+        </div>
+      </section>
 </body>
 </html>
