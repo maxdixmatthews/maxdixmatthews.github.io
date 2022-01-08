@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 body, html{
     font-family:'Josefin Sans', sans-serif;
@@ -113,7 +114,7 @@ header h1{
     position:relative;
     text-align: center;
     align-items: center;
-    justify-items: center;
+    justify-items: top;
     font-size: 30px;
 }
 
@@ -188,6 +189,318 @@ header h1{
 .revp{
     font-size: 20px;
 }
+
+*{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h5{
+  margin:0px;
+  font-size:1.4em;
+  font-weight:700;
+}
+
+p{
+  font-size:12px;
+}
+
+.cards > .center{
+    display: inline-block;
+    display: -moz-inline-box;
+    *display: inline; /* For IE7 */
+    zoom: 1; /* Trigger hasLayout */
+    margin-left: 2%;
+    width: 31%;
+    text-align: center;
+}
+.center{
+  height:100vh;
+  width: 33%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  display:inline-block;
+  
+}
+
+/* End Non-Essential  */
+
+.property-card{
+  height:18em;
+  width:14em;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius:16px;
+  overflow:hidden;
+  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image{
+  height:6em;
+  width:14em;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description{
+  background-color: #FAFAFC;
+  height:12em;
+  width:14em;
+  position:absolute;
+  bottom:0em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align:center;
+}
+
+/* Social Icons */
+
+.property-social-icons{
+  width:1em;
+  height:1em;
+  background-color:black;
+  position:absolute;
+  bottom:1em;
+  left:1em;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description{
+  height:0em;
+  padding:0px 1em;
+}
+.property-card:hover .property-image{
+  height:18em;
+}
+
+.property-card:hover .property-social-icons{
+  background-color:white;
+}
+
+.property-card:hover .property-social-icons:hover{
+  background-color:blue;
+  cursor:pointer;
+}
+
+.cardImg {
+    position:relative;
+}
+.cardImg img {
+    display:block;   
+    position:relative;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:100%;
+}
+.cardImg .cardTitle {
+    position:absolute;
+    left:0;
+    bottom:0;
+    padding:0 0 20px 20px;
+    margin:0;
+    color:#fff;
+}
+.cardDescription {
+    padding:20px;
+    margin:0;
+}
+.cardLink {
+    padding:20px;
+    border-top:1px solid #ccc;
+    margin:0;
+}
+.cardWrapper {
+    background-color:#fff;
+    position:relative;
+    margin: 0.5rem 0 1rem 0;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    height:100%;
+}
+.shadow {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+/* #foodC{
+    position:fixed;
+    align-items: left;
+    display:inline-block;
+    top:30;
+    right:0;
+    width: 100px;
+}
+
+#articleC{
+    position:fixed;
+    align-items: right;
+    top:20;
+    right:50;
+    width: 100px;
+    display:inline-block;
+}
+
+#pcC{
+    position:fixed;
+    align-items: right;
+    display:inline-block;
+    top:20;
+    right:100;
+    width: 100px;
+} */
+
 /* .col-m-4{
     background-color: rgba(255,255,255,0.5);
 } */
+
+
+/* Palm cards bit */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background: whitesmoke;
+  }
+  
+   button{
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: whitesmoke;
+  }
+  
+  button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .container{
+    width: 1280px;
+    margin: auto;
+  }
+  
+  header{background-color: #fff;}
+  
+  #header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 20px;
+    background: #fff;
+  }
+  
+  #header button{
+    font-family: inherit;
+    border: 1px solid red;
+  }
+  
+  #create-box{
+    /* display: none; */
+    width: 370px;
+    margin:auto;
+    padding: 20px;
+    margin-top: 10px;
+    background: whitesmoke;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  }
+  
+  #create-box h2{
+    color: black;
+    text-align: center;
+  }
+  
+  #create-box textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-family: inherit;
+    border: 1px solid lightgray;
+  }
+  
+  #create-box button{width: fit-content;}
+  
+  #flashcards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0px 10px;
+  }
+  
+  .flashcard{
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px; 
+    background:#fff;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  }
+  
+  .flashcard h2{font-size: 1rem;}
+  
+  @media(max-width:1280px){
+    .container{width: 100%;}
+  }
+  
+  @media(max-width:768px){
+    .flashcard{margin: auto;}
+  
+    .flashcard{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media(max-width:480px){
+    #header{
+      padding: 20px;
+      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #create_card{width: 95%;}
+  
+    .flashcard{width: 100%;}
+  
+  } 
