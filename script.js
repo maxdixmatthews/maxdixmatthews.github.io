@@ -1,4 +1,4 @@
-let reviews =[
+let FoodReviews =[
     "Everything is great, if it would cover the bill I would give my liver to eat here again.",
     "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities",
     "Lots of food. Lots and lots of food, more food than I could eat. More food than anyone could. The quantity makes up for quality",
@@ -7,36 +7,64 @@ let reviews =[
 ]
 
 function loadRev(string,id){
-    let text = reviews[string-1]
+    let text = FoodReviews[string-1]
     let result = text.substr(0,100)
     result += "..."
 
     document.getElementById(id).innerHTML = result;
 }
 
-function showRev1(){
-    // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
-    document.getElementById("f1").innerHTML = "Everything is great, if it would cover the bill I would give my liver to eat here again."
+function showFoodRevs(){
+    for (let i = 0; i < FoodReviews.length; i++) {
+        let num = "f"+(i+1).toString()
+        let text = FoodReviews[i]
+        let result = text.substr(0,100)
+        result += "..."
+        document.getElementById(num).innerHTML = result;
+    }
+ }
+// function showRev1(){
+//     // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
+//     document.getElementById("f1").innerHTML = "Everything is great, if it would cover the bill I would give my liver to eat here again."
+// }
+
+// function showRev2(){
+//     // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
+//     document.getElementById("f2").innerHTML = "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities"
+// }
+
+// function showRev3(){
+//     // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
+//     document.getElementById("f3").innerHTML = "Lots of food. Lots and lots of food, more food than I could eat. More food than anyone could. The quantity makes up for quality"
+// }
+
+// function showRev4(){
+//     // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
+//     document.getElementById("f4").innerHTML = FoodReviews[3]
+// }
+
+// function showRev5(){
+//     // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
+//     document.getElementById("f5").innerHTML = FoodReviws[4]
+// }
+
+let BookReviews =[
+    "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against."
+]
+
+function showBookRevs(){
+    for (let i = 0; i < FoodReviews.length; i++) {
+        let num = "f"+(i+1).toString()
+        let text = BookReviews[i]
+        let result = text.substr(0,100)
+        result += "..."
+        document.getElementById(num).innerHTML = result;
+    }
 }
 
-function showRev2(){
-    // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
-    document.getElementById("f2").innerHTML = "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities"
-}
-
-function showRev3(){
-    // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
-    document.getElementById("f3").innerHTML = "Lots of food. Lots and lots of food, more food than I could eat. More food than anyone could. The quantity makes up for quality"
-}
-
-function showRev4(){
-    // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
-    document.getElementById("f4").innerHTML = reviews[3]
-}
-
-function showRev5(){
-    // alert("Everything is great, if it would cover the bill I would give my liver to eat here again.")
-    document.getElementById("f5").innerHTML = reviews[4]
+function fullBookRev(divEl){
+    let num = "f"+(divEl).toString()
+    document.getElementById(num).innerHTML = BookReviews[divEl-1];
 }
 
 let chinese1 = [["I'm good", 'Wǒ hěn hǎo'], ['I hate them', 'Wǒ hèn tāmen'], ['pretty', 'Piàoliang'], ['you are', 'Nǐ shì'], ['want', 'yao'], ['shut up', 'bìzuǐ'], ['teacher', 'jiàoshī'], ['who?', 'shéi']];
