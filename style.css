@@ -111,11 +111,12 @@ header h1{
 }
 
 #iniP{
-    position:relative;
-    text-align: center;
-    align-items: center;
+    /* position:relative; */
+    text-align: center; 
+    align-items: center; 
     justify-items: top;
     font-size: 30px;
+    color: white;
 }
 
 #contL{
@@ -151,7 +152,7 @@ header h1{
   }
 
 .revTitle{
-    font-size: 25px;
+    font-size: 30px;
     color: black;
     font-weight: bold;
     text-align: left;
@@ -160,7 +161,9 @@ header h1{
     width: 300px;
     margin: auto;
 }
-
+.titleT{
+    font-size: 30px;
+}
 .titleStars{
     text-align: left;
     align-items: left;
@@ -206,22 +209,25 @@ p{
 }
 
 .cards > .center{
-    display: inline-block;
-    display: -moz-inline-box;
-    *display: inline; /* For IE7 */
+    display: flex;
+    display: inline-flex;
     zoom: 1; /* Trigger hasLayout */
     margin-left: 2%;
-    width: 31%;
-    text-align: center;
+    width: 22%;
+    text-align: center; 
+    justify-content: space-evenly;
+    justify-items: space-evenly;
 }
 .center{
-  height:100vh;
+  height:30hv;
   width: 33%;
+  display: -moz-inline-box;
   text-align: center;
   display: flex;
   align-items: center;
   display:inline-block;
-  
+  justify-content: space-evenly;
+  justify-items: space-evenly;
 }
 
 /* End Non-Essential  */
@@ -504,3 +510,9 @@ p{
     .flashcard{width: 100%;}
   
   } 
+
+/* Book-list page */
+
+.titleBooks{
+    font-size: 15px;
+}

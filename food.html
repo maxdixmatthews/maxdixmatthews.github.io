@@ -21,12 +21,12 @@
 
 </head>
 
-<body>
+<body onload="showFoodRevs()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img class = "logo" src= "logo2.png" alt="logo">
-        </a>
+          <a class="navbar-brand" href="index.html">
+            <img class = "logo" src= "logo.png" alt="logo">
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -34,17 +34,21 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="./index.html">Home
-                      <span class="sr-only">(current)</span>
                     </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./food.html">Food</a>
+                <a class="nav-link" href="./food.html">Food
+                  <span class="sr-only">(current)</span>
+                </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./articles.html">Articles</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./palm-cards.html">Palm Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./book-list.html">Book Reviews</a>
               </li>
             </ul>
           </div>
@@ -54,7 +58,7 @@
     <br />
     <div class = "rcorners2" onmouseover="showRev()">
         <div class = "revTitle">
-        <p> Balthazar</p>
+        <p class="titleT"> Balthazar</p>
         </div>
         <div id = "starAl">
         <span class="fa fa-star checked"></span>
@@ -73,7 +77,7 @@
 
     <div class = "rcorners2">
       <div class = "revTitle">
-      <p> Meat and Co</p>
+      <p class="titleT"> Meat and Co</p>
       </div>
       <div id = "starAl">
       <span class="fa fa-star checked"></span>
@@ -92,7 +96,7 @@
 
   <div class = "rcorners2">
     <div class = "revTitle">
-    <p>Epicurian</p>
+    <p class="titleT">Epicurian</p>
     </div>
     <div id = "starAl">
     <span class="fa fa-star checked"></span>
@@ -111,7 +115,7 @@
 
 <div class = "rcorners2">
   <div class = "revTitle">
-  <p> Friends</p>
+  <p class="titleT"> Friends</p>
   </div>
   <div id = "starAl">
   <span class="fa fa-star checked"></span>
@@ -130,7 +134,7 @@
 
 <div class = "rcorners2">
   <div class = "revTitle">
-  <p> Red Cabbage</p>
+  <p class="titleT"> Red Cabbage</p>
   </div>
   <div id = "starAl">
   <span class="fa fa-star checked"></span>
