@@ -6,13 +6,13 @@ let FoodReviews =[
     "Apparently shut down now, but when open had the best pork around. For fine dining not badly priced would absolutely return"
 ]
 
-function loadRev(string,id){
-    let text = FoodReviews[string-1]
-    let result = text.substr(0,100)
-    result += "..."
+// function loadRev(string,id){
+//     let text = FoodReviews[string-1]
+//     let result = text.substr(0,100)
+//     result += "..."
 
-    document.getElementById(id).innerHTML = result;
-}
+//     document.getElementById(id).innerHTML = result;
+// }
 
 function showFoodRevs(){
     for (let i = 0; i < FoodReviews.length; i++) {
@@ -49,11 +49,12 @@ function showFoodRevs(){
 // }
 
 let BookReviews =[
-    "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against."
+    "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against.",
+    "The fifth book in the Throne of Glass series. My favourite one up to now. The plot entertainingly moved through all the antagonists quickly. The male love interest wasn't great."
 ]
 
 function showBookRevs(){
-    for (let i = 0; i < FoodReviews.length; i++) {
+    for (let i = 0; i < BookReviews.length; i++) {
         let num = "f"+(i+1).toString()
         let text = BookReviews[i]
         let result = text.substr(0,100)
@@ -65,6 +66,11 @@ function showBookRevs(){
 function fullBookRev(divEl){
     let num = "f"+(divEl).toString()
     document.getElementById(num).innerHTML = BookReviews[divEl-1];
+}
+
+function fullFoodRev(divEl){
+    let num = "f"+(divEl).toString()
+    document.getElementById(num).innerHTML = FoodReviews[divEl-1];
 }
 
 let chinese1 = [["I'm good", 'Wǒ hěn hǎo'], ['I hate them', 'Wǒ hèn tāmen'], ['pretty', 'Piàoliang'], ['you are', 'Nǐ shì'], ['want', 'yao'], ['shut up', 'bìzuǐ'], ['teacher', 'jiàoshī'], ['who?', 'shéi']];

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
@@ -504,15 +504,20 @@ p{
       flex-direction: column;
       align-items: center;
     }
-  
     #create_card{width: 95%;}
-  
     .flashcard{width: 100%;}
-  
+    .cards{
+      align-items: center;
+    }
   } 
 
 /* Book-list page */
 
 .titleBooks{
     font-size: 15px;
+}
+
+.book-score{
+  font-size:20px; 
+  color:red;
 }
