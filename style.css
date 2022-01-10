@@ -486,6 +486,10 @@ p{
   
   @media(max-width:1280px){
     .container{width: 100%;}
+    .cards{
+      align-items: center;
+      display:block;
+    }
   }
   
   @media(max-width:768px){
@@ -494,6 +498,10 @@ p{
     .flashcard{
       margin-top: 10px;
       margin-bottom: 10px;
+    }
+    .cards{
+      align-items: center;
+      display:block;
     }
   }
   
@@ -508,7 +516,10 @@ p{
     #create_card{width: 95%;}
   
     .flashcard{width: 100%;}
-  
+    .cards{
+      align-items: center;
+      display:inline-block;
+    }
   } 
 
 /* Book-list page */
