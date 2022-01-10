@@ -516,7 +516,7 @@ p{
     .flashcard{width: 100%;}
     .cards{
       align-items: center;
-      display:inline-block;
+      display:block;
     }
   } 
 
