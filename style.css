@@ -524,7 +524,7 @@ p{
   @media screen and (max-width:800px){
     .cards > .center{
       width: 100%;
-      margin-left:30%;
+      margin-left:25%;
       align-items: center;
       display:block;
     }
