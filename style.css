@@ -493,7 +493,6 @@ p{
       margin:auto;
     }
     .center{
-      max-width:100%;
       width: 100%;
       align-items: center;
       display:block;
@@ -509,7 +508,6 @@ p{
       margin-bottom: 10px;
     }
     .cards > .center{
-      max-width:100%;
       width: 100%;
       align-items: center;
       display:block;
@@ -517,7 +515,6 @@ p{
 
     }
     .center{
-      max-width:100%;
       width: 100%;
       align-items: center;
       display:block;
@@ -536,14 +533,12 @@ p{
     #create_card{width: 95%;}
     .flashcard{width: 100%;}
     .cards > .center{
-      max-width:100%;
       width: 100%;
       align-items: center;
       display:block;
       margin:auto;
     }
     .center{
-      max-width:100%;
       width: 100%;
       margin:auto;
       align-items: center;
