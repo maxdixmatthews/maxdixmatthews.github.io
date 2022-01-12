@@ -515,6 +515,7 @@ p{
     #create_card{width: 95%;}
     .flashcard{width: 100%;}
     .center{
+      width: 100%;
       align-items: center;
       display:block;
     }
