@@ -518,7 +518,16 @@ p{
     #create_card{width: 95%;}
     .flashcard{width: 100%;}
     .center{
-      width: 22%;
+      width: 100%;
+      align-items: center;
+      display:block;
+    }
+  } 
+
+  @media(max-width:700px){
+    .cards > .center{
+      width: 100%;
+      margin-left:30%;
       align-items: center;
       display:block;
     }
