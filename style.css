@@ -524,9 +524,15 @@ p{
   @media screen and (max-width:800px){
     .cards > .center{
       width: 100%;
-      margin-left:25%;
+      margin: 0 auto;
       align-items: center;
       display:block;
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+    }
+    .center{
+      display:inline-block
     }
   } 
 
