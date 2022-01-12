@@ -521,7 +521,7 @@ p{
     }
   } 
 
-  @media screen and (max-width:800px){
+  @media screen and (max-width:768px){
     .cards > .center{
       width: 100%;
       margin: 0 auto;
