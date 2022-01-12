@@ -507,7 +507,7 @@ p{
   
   @media(max-width:480px){
     body{
-      zoom: 200%;
+      zoom: 120%;
     }
     #header{
       padding: 20px;
