@@ -1,9 +1,10 @@
 let FoodReviews =[
-    "Everything is great, if it would cover the bill I would give my liver to eat here again.",
-    "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities",
+    "A hefty steak resturant. Make sure to go here when someone else it paying, otherwise be sure to forget your wallet",
+    "Fun name. Sounds like it was owned by the biblical king of babylon and you eat to fund his expedition to Syria. Food good.",
+    "Food and service is very good. The steaks and garlic breadwere the standout. Very accomidating to disabilities",
     "Lots of food. Lots and lots of food, more food than I could eat. More food than anyone could. The quantity makes up for quality",
-    "When you're here it feels like you have friends. But when the bill is paid these friends dessert you and kick you out",
-    "Apparently shut down now, but when open had the best pork around. For fine dining not badly priced would absolutely return"
+    "When you're here it feels like everyone's your friends. But when the bill is paid (and you fail to tip) these friends dessert you.",
+    "Apparently shut down now, but when open had the best pork around. For fine dining not badly priced would absolutely return if it wasn't shut down"
 ]
 
 // function loadRev(string,id){
