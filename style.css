@@ -522,6 +522,7 @@ p{
       display: -webkit-box;
       -webkit-box-pack: center;
       -webkit-box-align: center;
+      padding:20px;
     }
     .center{
       display:inline-block
