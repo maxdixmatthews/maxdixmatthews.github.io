@@ -12,6 +12,7 @@ body, html{
     background-color: grey;
 }
 
+
 .carousel-item {
     height: 65vh;
     min-height: 350px;
@@ -148,7 +149,7 @@ header h1{
     padding: 20px;
     margin: auto;
     width: 75%;
-    height: 150px;
+    height: auto;
   }
 
 .revTitle{
@@ -442,7 +443,7 @@ p{
   }
   
   #create-box{
-    /* display: none; */
+    display: none;
     width: 370px;
     margin:auto;
     padding: 20px;
@@ -537,3 +538,5 @@ p{
   font-size:20px; 
   color:red;
 }
+
+/* Articles */

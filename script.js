@@ -1,6 +1,6 @@
 let FoodReviews =[
     "A hefty steak resturant. Make sure to go here when someone else it paying, otherwise be sure to forget your wallet",
-    "Fun name. Sounds like it was owned by the biblical king of babylon and you eat to fund his expedition to Syria. Food good.",
+    "Fun name. Sounds like it was owned by the biblical king of babylon and you eat to fund his inquisition into Syria. Food good.",
     "Food and service is very good. The steaks and garlic breadwere the standout. Very accomidating to disabilities",
     "Lots of food. Lots and lots of food, more food than I could eat. More food than anyone could. The quantity makes up for quality",
     "When you're here it feels like everyone's your friends. But when the bill is paid (and you fail to tip) these friends dessert you.",
@@ -51,7 +51,8 @@ function showFoodRevs(){
 
 let BookReviews =[
     "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against.",
-    "The fifth book in the Throne of Glass series. My favourite one up to now. The plot entertainingly moved through all the antagonists quickly. The male love interest wasn't great."
+    "The fifth book in the Throne of Glass series. My favourite one up to now. The plot entertainingly moved through all the antagonists quickly. The male love interest wasn't great.",
+    "An easy to read novel about university life. The characters were very on the nose. I couldn't tell if they were ironic deconstructions of steriotypes or just shallow but it was hard to engage with them. Keen to Reid her next book.",
 ]
 
 function showBookRevs(){
@@ -75,7 +76,11 @@ function fullFoodRev(divEl){
 }
 
 let chinese1 = [["I'm good", 'Wǒ hěn hǎo'], ['I hate them', 'Wǒ hèn tāmen'], ['pretty', 'Piàoliang'], ['you are', 'Nǐ shì'], ['want', 'yao'], ['shut up', 'bìzuǐ'], ['teacher', 'jiàoshī'], ['who?', 'shéi']];
-localStorage.setItem('chinese', JSON.stringify(chinese1));
+
+if(localStorage.getItem("chinese") === null){
+    localStorage.setItem('chinese', JSON.stringify(chinese1));
+}
+
 
 let colorsSata = JSON.parse (localStorage.getItem('chinese'));
 console.log(colorsSata)
@@ -136,7 +141,7 @@ function divMaker(text){
     div.className = 'flashcard';
     h2_question.setAttribute('style', "border-top: 1px solid black; padding: 15px; margin-top: 30px")
     h2_question.innerHTML = text[0];
-    h2_answer.setAttribute('style', "text-allgin: center; display:none; color:red");
+    h2_answer.setAttribute('style', "text-align: center; display:none; color:red");
     h2_answer.innerHTML = text[1];
 
     div.appendChild(h2_question);
@@ -155,21 +160,24 @@ function divMaker(text){
 
 
 function oldWords(){
-    for (let i = 0; i < chinese1.length; i++) {
-        divMaker(chinese1[i]);
+    for (let i = 0; i < colorsSata.length; i++) {
+        divMaker(colorsSata[i]);
       }
 }
 
 function addFlashcard(){
     let question = document.getElementById("question");
     let answer = document.getElementById("answer");
-    let contentArray = localStorage.getItem('chinese') ? JSON.parse(localStorage.getItem('items')) : [];
+    let contentArray = JSON.parse (localStorage.getItem('chinese'));
     let flashcard_info = [
         question.value,
         answer.value
-    ]
-    // contentArray.push(flashcard_info);
+    ];
+    contentArray.push(flashcard_info);
     localStorage.setItem('chinese', JSON.stringify(contentArray));
+    let content = JSON.parse (localStorage.getItem('chinese'));
+    console.log(content);
+
     divMaker(flashcard_info);
     question.value = ''
     answer.value = ''
