@@ -526,6 +526,10 @@ p{
     .center{
       display:inline-block
     }
+    .rcorners2{
+      width: 100%;
+      height: auto;
+    }
   } 
 
 /* Book-list page */
