@@ -107,6 +107,8 @@ console.log(colorsSata)
 //     document.getElementById("f5").innerHTML = "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities"
 // };
 
+var voices = window.speechSynthesis.getVoices();
+
 
 var contentArray = JSON.parse (localStorage.getItem('chinese'));
 
@@ -114,6 +116,24 @@ let flashcards = document.getElementByid("flashcards");
 let createBox = document.getElementById("create-box");
 let question = document.getElementById("question");
 let answer = document.getElementById("answer");
+
+function speakPls(text){
+    var msg = new SpeechSynthesisUtterance();
+    // var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[5]; // Note: some voices don't support altering params
+    msg.voiceURI = 'native';
+    msg.volume = 1; // 0 to 1
+    msg.rate = 1; // 0.1 to 10
+    msg.pitch = 1; //0 to 2
+    msg.text = text;
+    msg.lang = 'zh-CN';
+
+    msg.onend = function(e) {
+    console.log('Finished in ' + event.elapsedTime + ' seconds.');
+    };
+
+    speechSynthesis.speak(msg);
+}
 
 function delFlashCards(){
     let flashcards = document.getElementById("flashcards");
@@ -136,6 +156,7 @@ function divMaker(text){
     var div = document.createElement("div");
     var h2_question = document.createElement("h2");
     var h2_answer = document.createElement("h2");
+    var speaker = document.createElement("i");
     let flashcards = document.getElementById("flashcards");
 
     div.className = 'flashcard';
@@ -144,8 +165,13 @@ function divMaker(text){
     h2_answer.setAttribute('style', "text-align: center; display:none; color:red");
     h2_answer.innerHTML = text[1];
 
+    speaker.className = "fas fa-volume-up"; 
+    speaker.setAttribute('onclick','speakPls');
+    speaker.setAttribute('style', "position: relative; padding-left:90%");
+
     div.appendChild(h2_question);
     div.appendChild(h2_answer);
+    div.appendChild(speaker)
 
     div.addEventListener("click", function(){
         if(h2_answer.style.display == "none")
@@ -153,6 +179,15 @@ function divMaker(text){
         else 
             h2_answer.style.display = "none";
 
+    })
+
+    speaker.addEventListener("click", function(){
+        if(h2_answer.style.display == "none")
+            h2_answer.style.display = "block";
+        else 
+            h2_answer.style.display = "none";
+        
+        speakPls(text[1]);
     })
     flashcards.appendChild(div);
 }

@@ -479,7 +479,7 @@ p{
   
   .flashcard{
     width: 370px;
-    height: 200px;
+    height: auto;
     word-wrap: break-word;
     margin: 10px; 
     background:#fff;
@@ -532,6 +532,7 @@ p{
       height: auto;
     }
   } 
+
 
 /* Book-list page */
 
