@@ -495,8 +495,10 @@ p{
   
   @media screen and  (max-width:768px){
     .flashcard{margin: auto;}
+    .container{width: 100%;}
   
     .flashcard{
+      width: 90%;
       margin-top: 10px;
       margin-bottom: 10px;
     }
