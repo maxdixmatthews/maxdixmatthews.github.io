@@ -106,10 +106,8 @@ console.log(colorsSata)
 // document.getElementById("f5").onclick = function(){
 //     document.getElementById("f5").innerHTML = "Food and service is very good. The steaks were the standout, along with the garlic bread. Very accomidating to disabilities"
 // };
-
+speechSynthesis.cancel();
 var voices = window.speechSynthesis.getVoices();
-
-
 var contentArray = JSON.parse (localStorage.getItem('chinese'));
 
 let flashcards = document.getElementByid("flashcards");
@@ -129,7 +127,7 @@ function speakPls(text){
     msg.lang = 'zh-CN';
 
     msg.onend = function(e) {
-    console.log('Finished in ' + event.elapsedTime + ' seconds.');
+    console.log('Finished in ' + event.elapsedTime + ' miliseconds.');
     };
 
     speechSynthesis.speak(msg);
@@ -158,6 +156,9 @@ function divMaker(text){
     var h2_answer = document.createElement("h2");
     var speaker = document.createElement("i");
     let flashcards = document.getElementById("flashcards");
+    var br1 = document.createElement("br")
+    var br2 = document.createElement("br")
+    var br3 = document.createElement("br")
 
     div.className = 'flashcard';
     h2_question.setAttribute('style', "border-top: 1px solid black; padding: 15px; margin-top: 30px")
@@ -167,10 +168,13 @@ function divMaker(text){
 
     speaker.className = "fas fa-volume-up"; 
     speaker.setAttribute('onclick','speakPls');
-    speaker.setAttribute('style', "position: relative; padding-left:90%");
+    speaker.setAttribute('style', " position: relative; padding-left:90%");
 
     div.appendChild(h2_question);
     div.appendChild(h2_answer);
+    div.appendChild(br1);
+    div.appendChild(br2);
+
     div.appendChild(speaker)
 
     div.addEventListener("click", function(){
@@ -182,11 +186,6 @@ function divMaker(text){
     })
 
     speaker.addEventListener("click", function(){
-        if(h2_answer.style.display == "none")
-            h2_answer.style.display = "block";
-        else 
-            h2_answer.style.display = "none";
-        
         speakPls(text[1]);
     })
     flashcards.appendChild(div);
