@@ -534,6 +534,8 @@ p{
       width: 100%;
       height: auto;
     }
+    .container{width: 100%;}
+    .flashcard{width: 90%;}
   } 
 
 
