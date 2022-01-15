@@ -512,7 +512,8 @@ p{
       align-items: center;
     }
     #create_card{width: 95%;}
-    .flashcard{width: 100%;}
+    .container{width: 100%;}
+    .flashcard{width: 90%;}
   } 
 
   @media screen and (max-width:768px){
