@@ -53,6 +53,7 @@ let BookReviews =[
     "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against.",
     "The fifth book in the Throne of Glass series. My favourite one up to now. The plot entertainingly moved through all the antagonists quickly. The male love interest wasn't great.",
     "An easy to read novel about university life. The characters were very on the nose. I couldn't tell if they were ironic deconstructions of steriotypes or just shallow but it was hard to engage with them. Keen to Reid her next book.",
+    "A compilation of David Sedaris' greatest hits. There is not overiding story in the collection of essays from <i> <a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i>, <i><a style='color:black', href='https://www.bookdepository.com/Let-s-Explore-Diabetes-With-Owls/9780349119427'>Let's explore Diabetes with Owls</a></i> and <i><a style='color:black', href='https://www.bookdepository.com/When-You-Are-Engulfed-Flames-David-Sedaris/9780316154680?ref=grid-view&qid=1642428136977&sr=1-1'>Engulfed</a></i>. Read <i><a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i> if you want a plotted story."
 ]
 
 function showBookRevs(){
@@ -190,8 +191,6 @@ function divMaker(text){
     })
     flashcards.appendChild(div);
 }
-
-
 
 function oldWords(){
     for (let i = 0; i < colorsSata.length; i++) {
