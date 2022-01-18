@@ -12,7 +12,6 @@ body, html{
     background-color: grey;
 }
 
-
 .carousel-item {
     height: 65vh;
     min-height: 350px;
@@ -363,38 +362,6 @@ p{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
-/* #foodC{
-    position:fixed;
-    align-items: left;
-    display:inline-block;
-    top:30;
-    right:0;
-    width: 100px;
-}
-
-#articleC{
-    position:fixed;
-    align-items: right;
-    top:20;
-    right:50;
-    width: 100px;
-    display:inline-block;
-}
-
-#pcC{
-    position:fixed;
-    align-items: right;
-    display:inline-block;
-    top:20;
-    right:100;
-    width: 100px;
-} */
-
-/* .col-m-4{
-    background-color: rgba(255,255,255,0.5);
-} */
-
-
 /* Palm cards bit */
 *{
     margin: 0;
@@ -502,6 +469,11 @@ p{
       margin-top: 10px;
       margin-bottom: 10px;
     }
+
+    .rcorners2{
+      width: 100%;
+      height: auto;
+    }
   }
   
   @media screen and (max-width:480px){
@@ -514,6 +486,10 @@ p{
     #create_card{width: 95%;}
     .container{width: 100%;}
     .flashcard{width: 90%;}
+    .rcorners2{
+      width: 100%;
+      height: auto;
+    }
   } 
 
   @media screen and (max-width:768px){
