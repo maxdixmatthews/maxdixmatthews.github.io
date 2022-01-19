@@ -527,3 +527,19 @@ p{
 }
 
 /* Articles */
+
+/* Shan List */
+.item-list{
+  margin-left: 48%;
+  text-align: center;
+  padding: 20px;
+  width:30px;
+  height:30px;
+  justify-items: center;
+}
+
+#center{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

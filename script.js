@@ -53,7 +53,8 @@ let BookReviews =[
     "A great intro to UBI. Lowry covers all the main arguments for a UBI (poverty, technological unemployment, ect.) and offers convincing rebuttles of the arguments against.",
     "The fifth book in the Throne of Glass series. My favourite one up to now. The plot entertainingly moved through all the antagonists quickly. The male love interest wasn't great.",
     "An easy to read novel about university life. The characters were very on the nose. I couldn't tell if they were ironic deconstructions of steriotypes or just shallow but it was hard to engage with them. Keen to Reid her next book.",
-    "A compilation of David Sedaris' greatest hits. There is not overiding story in the collection of essays from <i> <a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i>, <i><a style='color:black', href='https://www.bookdepository.com/Let-s-Explore-Diabetes-With-Owls/9780349119427'>Let's explore Diabetes with Owls</a></i> and <i><a style='color:black', href='https://www.bookdepository.com/When-You-Are-Engulfed-in-Flames/9780316154680'>Engulfed</a></i>. Read <i><a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i> if you want a plotted story."
+    "A compilation of David Sedaris' greatest hits. There is not overiding story in the collection of essays from <i> <a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i>, <i><a style='color:black', href='https://www.bookdepository.com/Let-s-Explore-Diabetes-With-Owls/9780349119427'>Let's explore Diabetes with Owls</a></i> and <i><a style='color:black', href='https://www.bookdepository.com/When-You-Are-Engulfed-in-Flames/9780316154680'>Engulfed</a></i>. Read <i><a style='color:black', href='https://www.bookdepository.com/Calypso-David-Sedaris/9780349141893?ref=grid-view&qid=1642427863552&sr=1-1'>Calypso</a></i> if you want a plotted story.",
+    "A short autobiographical guidebook. In Patchett's memoir she gives a lot of practical advice about writing. Final line: 'Writing is a miserable, awful buisness... It is better than anything in the world'."
 ]
 
 function showBookRevs(){
@@ -215,4 +216,97 @@ function addFlashcard(){
     question.value = ''
     answer.value = ''
 
+}
+
+// shan's functions 
+let d = new Date();
+let time = d.getTime();
+
+let time_to_expire= time + 2*3600000 
+
+let anxiety_list = {
+    "expire":time_to_expire,
+    "iron": 0,
+    "stove": 0,
+    "straightener":0,
+    "other":0
+}
+console.log(anxiety_list)
+
+localStorage.setItem('anxiety', JSON.stringify(anxiety_list));
+let blahh = JSON.parse (localStorage.getItem('anxiety'));
+console.log(blahh)
+if(localStorage.getItem("anxiety") === null){
+    localStorage.setItem('anxiety', JSON.stringify(anxiety_list));
+}
+
+function saveInfo(){
+    var iron = document.getElementById("iron").checked;
+    let stove = document.getElementById("stove").checked;
+    let straightener = document.getElementById("straightener").checked;
+    let other = document.getElementById("other").checked;
+
+    const d = new Date();
+    let time = d.getTime();
+
+    let time_to_expire= time+ 2*3600000 
+    let check_list = JSON.parse (localStorage.getItem('anxiety'));
+
+    let anxiety_list = {
+        "expire":time_to_expire,
+        "iron": check_list.iron||iron,
+        "stove": check_list.stove||stove,
+        "straightener":check_list.straightener||straightener,
+        "other":check_list.other||other
+    }
+    localStorage.setItem('anxiety', JSON.stringify(anxiety_list));
+    let allIt = JSON.parse (localStorage.getItem('anxiety'));
+    console.log(allIt)
+}
+
+function newInfo(){
+    let d = new Date();
+    let time = d.getTime();
+
+    let time_to_expire= time + 2*3600000 
+
+    let anxiety_list = {
+        "expire":time_to_expire,
+        "iron": false,
+        "stove": false,
+        "straightener": false,
+        "other": false
+    }
+
+    localStorage.setItem('anxiety', JSON.stringify(anxiety_list));
+    let del = JSON.parse (localStorage.getItem('anxiety'));
+    console.log(del)
+}
+
+function checkComplete(){
+    let what_is_on = JSON.parse (localStorage.getItem('anxiety'));
+    var warning = document.getElementById("isItDone")
+    const d = new Date();
+    let time = d.getTime();
+    let printStr ="WARNING WARNING"
+    if(time > what_is_on.expire){
+        printStr+="NOT COMPLETE";
+        newInfo()
+    }
+
+    if(!what_is_on.iron){
+        printStr+=" IRON ON"
+    }
+
+    if(!what_is_on.stove){
+        printStr+=" STOVE ON"
+    }
+
+    if(!what_is_on.straightener){
+        printStr+=" STRAIGHTENER ON"
+    }
+    if(printStr === "WARNING WARNING"){
+        printStr = "YOU ARE SAFE! Good job shan"
+    }
+    warning.innerHTML=printStr
 }
