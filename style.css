@@ -470,10 +470,6 @@ p{
       margin-bottom: 10px;
     }
 
-    .rcorners2{
-      width: 100%;
-      height: auto;
-    }
   }
   
   @media screen and (max-width:480px){
@@ -487,12 +483,12 @@ p{
     .container{width: 100%;}
     .flashcard{width: 90%;}
     .rcorners2{
-      width: 100%;
+      width: 95%;
       height: auto;
     }
   } 
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width:800px){
     .cards > .center{
       width: 100%;
       margin: 0 auto;
@@ -512,22 +508,25 @@ p{
     }
     .container{width: 100%;}
     .flashcard{width: 90%;}
-    .foodRev{
+    /* .foodRev{
       font-size: 200px;
+    } */
+    .titleBooks {
+      font-size: 28px !important;
     }
     .titleBooks{
-      font-size: 100px;
+      font-size: 28px;
     }
-    .titleBooks{
-      font-size: 27px;
+    .revp {
+      font-size: 28px;
     }
-    .revp{
-      font-size: 25px;
-    }
-    .book-score{
-      font-size:28px; 
+    .book-score {
+      font-size:28px !important;; 
       color:red;
     }
+    /* .bookLink {
+      font-size:28px;
+    } */
   } 
 
 
