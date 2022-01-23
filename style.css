@@ -512,6 +512,22 @@ p{
     }
     .container{width: 100%;}
     .flashcard{width: 90%;}
+    .foodRev{
+      font-size: 200px;
+    }
+    .titleBooks{
+      font-size: 100px;
+    }
+    .titleBooks{
+      font-size: 27px;
+    }
+    .revp{
+      font-size: 25px;
+    }
+    .book-score{
+      font-size:28px; 
+      color:red;
+    }
   } 
 
 
