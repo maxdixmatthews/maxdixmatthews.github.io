@@ -151,7 +151,7 @@ function remCardStorage(word){
     var newArray = new Array()
     for(var i = 0; i <= allWords.length - 2; i++){
         if(allWords[i][0] != word[0]){
-            newArray.push([i])
+            newArray.push(allWords[i])
         }
     }
     localStorage.setItem('chinese', JSON.stringify(newArray));
