@@ -80,7 +80,7 @@ function fullFoodRev(divEl){
 
 let chinese1 = [["I'm good", 'Wǒ hěn hǎo'], ['I hate them', 'Wǒ hèn tāmen'], ['pretty', 'Piàoliang'], ['you are', 'Nǐ shì'], ['want', 'yao'], ['shut up', 'bìzuǐ'], ['teacher', 'jiàoshī'], ['who?', 'shéi']];
 
-if(localStorage.getItem("chinese") === null | localStorage.getItem("chinese").length == 0){
+if(localStorage.getItem("chinese") === null || localStorage.getItem("chinese").length == 0){
     localStorage.setItem('chinese', JSON.stringify(chinese1));
 }
 
