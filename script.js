@@ -188,7 +188,7 @@ function divMaker(text){
     h2_answer.innerHTML = text[1];
 
     delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; padding-bottom:90%; padding-left: 90%; color:red")
+    delCard.setAttribute('style',"position: relative; padding-bottom:95%; padding-left: 90%; color:red")
     // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
@@ -199,9 +199,9 @@ function divMaker(text){
     div.appendChild(h2_answer);
     div.appendChild(br1);
     div.appendChild(br2);
-
-    div.appendChild(speaker)
     div.appendChild(delCard)
+    div.appendChild(speaker)
+    
 
     div.addEventListener("click", function(){
         if(h2_answer.style.display == "none")
