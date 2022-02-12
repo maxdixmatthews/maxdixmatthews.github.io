@@ -80,7 +80,7 @@ function fullFoodRev(divEl){
 
 let chinese1 = [["I'm good", 'Wǒ hěn hǎo'], ['I hate them', 'Wǒ hèn tāmen'], ['pretty', 'Piàoliang'], ['you are', 'Nǐ shì'], ['want', 'yao'], ['shut up', 'bìzuǐ'], ['teacher', 'jiàoshī'], ['who?', 'shéi']];
 
-if(localStorage.getItem("chinese") === null){
+if(localStorage.getItem("chinese") === null | localStorage.getItem("chinese").length == 0){
     localStorage.setItem('chinese', JSON.stringify(chinese1));
 }
 
@@ -188,7 +188,7 @@ function divMaker(text){
     h2_answer.innerHTML = text[1];
 
     delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; padding-bottom:90%; padding-left: 90%; color:red")
+    delCard.setAttribute('style',"position: relative; padding-top:10%; padding-left: 90%; color:red")
     // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
