@@ -148,8 +148,10 @@ function remCardStorage(word){
     var allWords = JSON.parse (localStorage.getItem('chinese'));
     var index = allWords[0].indexOf(word[0]);
     console.log(index);
-    if (index > -1) {
-        allWords.splice(index, 1); // 2nd parameter means remove one item only
+    for(var i = 0; i <= allWords.length - 1; i++){
+        if(allWords[i][0] == word[0]){
+            allWords[i].splice(0,2);
+        }
     }
     localStorage.setItem('chinese', JSON.stringify(allWords));
     oldWords();
