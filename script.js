@@ -143,6 +143,23 @@ function delFlashCards(){
     contentArray = [];
 }
 
+function remCardStorage(word){
+    console.log(word);
+    var allWords = JSON.parse (localStorage.getItem('chinese'));
+    var index = allWords[0].indexOf(word[0]);
+    console.log(index);
+    var newArray = new Array()
+    for(var i = 0; i <= allWords.length - 1; i++){
+        if(allWords[i][0] != word[0]){
+            newArray.push(allWords[i])
+        }
+    }
+    localStorage.setItem('chinese', JSON.stringify(newArray));
+    oldWords();
+    window.location.reload();
+    console.log(newArray);
+}
+
 function hideCreateBox(){
     let createBox = document.getElementById("create-box");
     createBox.style.display = "none";
@@ -158,6 +175,7 @@ function divMaker(text){
     var h2_question = document.createElement("h2");
     var h2_answer = document.createElement("h2");
     var speaker = document.createElement("i");
+    var delCard = document.createElement("i")
     let flashcards = document.getElementById("flashcards");
     var br1 = document.createElement("br")
     var br2 = document.createElement("br")
@@ -169,6 +187,10 @@ function divMaker(text){
     h2_answer.setAttribute('style', "text-align: center; display:none; color:red");
     h2_answer.innerHTML = text[1];
 
+    delCard.className = "fa fa-close"
+    delCard.setAttribute('style',"position: relative; padding-bottom:95%; padding-left: 90%; color:red")
+    // delCard.setAttribute('onclick','deleteCard')
+
     speaker.className = "fas fa-volume-up"; 
     speaker.setAttribute('onclick','speakPls');
     speaker.setAttribute('style', " position: relative; padding-left:90%");
@@ -177,8 +199,9 @@ function divMaker(text){
     div.appendChild(h2_answer);
     div.appendChild(br1);
     div.appendChild(br2);
-
+    div.appendChild(delCard)
     div.appendChild(speaker)
+    
 
     div.addEventListener("click", function(){
         if(h2_answer.style.display == "none")
@@ -191,12 +214,19 @@ function divMaker(text){
     speaker.addEventListener("click", function(){
         speakPls(text[1]);
     })
+
+    delCard.addEventListener("click", function(){
+        remCardStorage(text);
+    })
+
     flashcards.appendChild(div);
 }
 
+
 function oldWords(){
-    for (let i = 0; i < colorsSata.length; i++) {
-        divMaker(colorsSata[i]);
+    let refillData = JSON.parse (localStorage.getItem('chinese'));
+    for (let i = 0; i < refillData.length; i++) {
+        divMaker(refillData[i]);
       }
 }
 
@@ -216,7 +246,6 @@ function addFlashcard(){
     divMaker(flashcard_info);
     question.value = ''
     answer.value = ''
-
 }
 
 // shan's functions 
