@@ -188,7 +188,7 @@ function divMaker(text){
     h2_answer.innerHTML = text[1];
 
     delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; padding-bottom:10px; padding-left: 10px; color:red")
+    delCard.setAttribute('style',"position: relative; padding-bottom:90%; padding-left: 90%; color:red")
     // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
