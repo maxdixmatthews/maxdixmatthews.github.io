@@ -151,6 +151,7 @@ function remCardStorage(word){
     }
     localStorage.setItem('chinese', JSON.stringify(allWords));
     oldWords();
+    console.log(allWords);
 }
 
 function hideCreateBox(){
@@ -181,7 +182,7 @@ function divMaker(text){
     h2_answer.innerHTML = text[1];
 
     delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; margin-top:10px ; margin-right: 10px; color:red")
+    delCard.setAttribute('style',"position: relative; margin-top:10px; margin-right: 10px; color:red")
     // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
@@ -209,7 +210,7 @@ function divMaker(text){
     })
 
     delCard.addEventListener("click", function(){
-        remCardStorage(text)
+        remCardStorage(text);
     })
 
     flashcards.appendChild(div);
