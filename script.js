@@ -155,6 +155,7 @@ function remCardStorage(word){
     }
     localStorage.setItem('chinese', JSON.stringify(allWords));
     oldWords();
+    location.reload();
     console.log(allWords);
 }
 
