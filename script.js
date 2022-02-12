@@ -148,15 +148,16 @@ function remCardStorage(word){
     var allWords = JSON.parse (localStorage.getItem('chinese'));
     var index = allWords[0].indexOf(word[0]);
     console.log(index);
-    for(var i = 0; i <= allWords.length - 1; i++){
-        if(allWords[i][0] == word[0]){
-            allWords[i].splice(0,2);
+    var newArray = new Array()
+    for(var i = 0; i <= allWords.length - 2; i++){
+        if(allWords[i][0] != word[0]){
+            newArray.push([i])
         }
     }
-    localStorage.setItem('chinese', JSON.stringify(allWords));
+    localStorage.setItem('chinese', JSON.stringify(newArray));
     oldWords();
     window.location.reload();
-    console.log(allWords);
+    console.log(newArray);
 }
 
 function hideCreateBox(){
@@ -245,7 +246,6 @@ function addFlashcard(){
     divMaker(flashcard_info);
     question.value = ''
     answer.value = ''
-
 }
 
 // shan's functions 
