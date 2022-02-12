@@ -149,7 +149,7 @@ function remCardStorage(word){
     var index = allWords[0].indexOf(word[0]);
     console.log(index);
     var newArray = new Array()
-    for(var i = 0; i <= allWords.length - 2; i++){
+    for(var i = 0; i <= allWords.length - 1; i++){
         if(allWords[i][0] != word[0]){
             newArray.push(allWords[i])
         }
