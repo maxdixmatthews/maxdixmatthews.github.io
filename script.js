@@ -158,6 +158,7 @@ function divMaker(text){
     var h2_question = document.createElement("h2");
     var h2_answer = document.createElement("h2");
     var speaker = document.createElement("i");
+    var delCard = document.createElement("i")
     let flashcards = document.getElementById("flashcards");
     var br1 = document.createElement("br")
     var br2 = document.createElement("br")
@@ -168,6 +169,10 @@ function divMaker(text){
     h2_question.innerHTML = text[0];
     h2_answer.setAttribute('style', "text-align: center; display:none; color:red");
     h2_answer.innerHTML = text[1];
+
+    delCard.className = "fa fa-close"
+    delCard.setAttribute('style',"position: relative; top:5px; right:5px; color:red")
+    delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
     speaker.setAttribute('onclick','speakPls');
@@ -191,6 +196,11 @@ function divMaker(text){
     speaker.addEventListener("click", function(){
         speakPls(text[1]);
     })
+
+    del.addEventListener("click", function(){
+        remCardStorage(text[0])
+    })
+
     flashcards.appendChild(div);
 }
 
