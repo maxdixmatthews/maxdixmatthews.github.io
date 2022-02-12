@@ -172,7 +172,7 @@ function divMaker(text){
 
     delCard.className = "fa fa-close"
     delCard.setAttribute('style',"position: relative; top:5px; right:5px; color:red")
-    delCard.setAttribute('onclick','deleteCard')
+    // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
     speaker.setAttribute('onclick','speakPls');
@@ -184,6 +184,7 @@ function divMaker(text){
     div.appendChild(br2);
 
     div.appendChild(speaker)
+    div.appendChild(delCard)
 
     div.addEventListener("click", function(){
         if(h2_answer.style.display == "none")
@@ -197,9 +198,9 @@ function divMaker(text){
         speakPls(text[1]);
     })
 
-    del.addEventListener("click", function(){
-        remCardStorage(text[0])
-    })
+    // del.addEventListener("click", function(){
+    //     remCardStorage(text[0])
+    // })
 
     flashcards.appendChild(div);
 }
