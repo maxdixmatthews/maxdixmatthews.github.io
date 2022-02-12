@@ -144,8 +144,10 @@ function delFlashCards(){
 }
 
 function remCardStorage(word){
+    console.log(word);
     var allWords = JSON.parse (localStorage.getItem('chinese'));
     var index = allWords.indexOf(word);
+    console.log(index);
     if (index > -1) {
         allWords.splice(index, 1); // 2nd parameter means remove one item only
     }
