@@ -181,7 +181,7 @@ function divMaker(text){
     h2_answer.innerHTML = text[1];
 
     delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; margin-top:10px ; right:95%; color:red")
+    delCard.setAttribute('style',"position: relative; margin-top:10px ; margin-right: 10px; color:red")
     // delCard.setAttribute('onclick','deleteCard')
 
     speaker.className = "fas fa-volume-up"; 
@@ -208,7 +208,7 @@ function divMaker(text){
         speakPls(text[1]);
     })
 
-    del.addEventListener("click", function(){
+    delCard.addEventListener("click", function(){
         remCardStorage(text)
     })
 
