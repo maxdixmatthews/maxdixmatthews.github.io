@@ -542,6 +542,17 @@ p{
 }
 
 /* Articles */
+#whole-brew-format{
+  margin-left:2%
+}
+
+.coffee-para{
+  font-size: large;
+}
+.coffee-list{
+  margin-left:5%;
+  font-size: large;
+}
 
 /* Shan List */
 .item-list{

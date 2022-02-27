@@ -10,6 +10,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <meta charset="utf-8" />
     <title>Max</title>
     <style>
@@ -53,63 +55,84 @@
             </ul>
           </div>
         </div>
-      </nav>        
+      </nav>
+
+    <h1 style="margin-left:2%">Ben's Guide to Cold Brew Coffee</h1>
+
+    <div id="whole-brew-format">
+      <p class="coffee-para">2022-02-21 00:00:00 +0000 - Written by Benjamin Dix-Matthews</p>
+      <p class="coffee-para">Cold brew is unequivocally the the best way to make and drink coffee. 
+        It is easy to make, requires less equipment than other forms of coffee, 
+        and tastes less bitter than hot brewing methods. Cold brew over ice is particularly excellent over the summer. 
+        Hot coffee on a 40 degree day is for masochists</p>
+      <h2>1. Brewing Cold Brew</h2>
+
+      <p class="coffee-para">It is extremely easy to over-think and over-complicate the brewing of cold brew.
+        In reality, it is just two simple steps:</p>
+
+      <ol class="coffee-list">
+        <li>Put <strong>80 g/L</strong> of good coffee beans (ground as coarsely as possible) in some water, shake or stir, and then leave for <strong>12 - 24 hours</strong>.
+      Big Jars, iced tea jugs and french presses all make excellent brewing vessels.</li>
+        <li>Filter the coffee through cheese cloth (this is what i do), or a paper filter, or in a pinch any fabric, into a bottle and store in the fridge for up to two weeks.
+      The cold brew can then be served over ice, and i have found it goes well with a slice of orange (thanks Nika).</li>
+      </ol>
+      <p class="coffee-para">The ratios, brew-times, bean types, and filtration methods can all be tweaked for personal preference. 
+        I have yet to mess the recipe up to an extent that i have not wanted to drink the product. 
+        My main word of caution would be on over brewing, this can make the coffee taste pretty bitter.</p>
+
+      <h2>2. Nitro Coffee</h2>
+      <p class="coffee-para">If you are one of the fortunate few who have kegging 
+        gear and nitrogen gas you can turn your cold brew into nitro. 
+        This makes the cold brew come out a bit like a stout, and adds a creamy texture.</p>
+        <ol class="coffee-list">
+          <li>Put the cold brew into a keg, seal and pressurise to <strong>~40 psi</strong>.</li>
+          <li>Purge the air from the keg with at least three quick tugs on the release valve.
+        This should make the shelf life super long (not overly scientific, but i have never had a keg last long enough to check this).</li>
+          <li>Cool the keg down in a fridge for about a day.</li>
+          <li>Shake the keg for about 10 minutes at 40 psi to try and dissolve as much nitrogen gas as possible.
+        Nitrogen doesn’t dissolve very well, so doing this while the keg is cold is a must (cold water dissolves gas better).</li>
+          <li>Ready to serve (also at 40 psi).
+        Serving through a stout nozzle is ideal, but whatever is fine.</li>
+        </ol>
+
+        <h2>3. Caffeine Content of Cold Brew Coffee</h2>
+        <p class="coffee-para">Note that all of this information was found from random blogs and would benefit with a tad more scientific rigour.
+          That said, who has the time for scientific rigour?
+          Who am i, some kind of scientist?</p>
+
+        <p class="coffee-para">The caffeine content of cold brew depends on three parameters:</p>
+        <ol class="coffee-list">
+          <li>
+            <strong>Bean caffeine content (B<sub>c</sub>)</strong> primarily depends on the origin and species of the coffee beans.
+        Roast and grind can vary the content by a few percent, but this is essentially negligible.
+        Typical Araciba beans have a caffeine content of around <strong>1.2% by weight</strong>.
+          </li>
+          <li>
+            <strong>Extraction efficiency (E)</strong> refers to the proportion of the bean’s caffeine that is actually extracted during brewing, and depends on the brewing method.
+        The extraction method for hot brewing is around 90% and some random blog said that cold brewing was around 10% less efficient.
+        Thus, we will assume a cold brew extraction efficiency of around <strong>80%</strong>.
+          </li>
+          <li>
+            <strong>Brew ratio (R)</strong> refers to the ratio of beans to water and can change a fair amount from person to person.
+        I use <strong>80g/L</strong> which corresponds to a ratio of 1:12.5.
+          </li>
+        </ol>
+        <p class="coffee-para">Thus the caffeine content of the cold brew can be estimated as the product of these factors:</p>
+
+        <blockquote>
+          <p class="coffee-para"><p class="coffee-para">\begin{align*}
+            C &= B_c * E * R \\
+            &= 1.2 * 10^{-2} [\frac{g}{g}]  * 0.8 * 80 [\frac{g}{L}] \\
+            &= 0.96\% * 80 [\frac{g}{L}] \\
+            &= 768 \frac{mg}{L}
+        \end{align*}</p></p>
+        </blockquote>
+
+        <p class="coffee-para">Note, these calculations are consistent with a rule of thumb on reddit that the caffeine content is 1% of the dry coffee weight.</p>
+
+        <p class="coffee-para">As a reference point, Red Bull has a caffeine content of around 320 mg/L, and a shot (30 mL) of coffee is around 64 mg.
+        Moral of the story: cold brew is strong, don’t chug a litre of it.</p>
     </div>
-    <br />
-    <h1 id="ben-s-guide-to-cold-brew-coffee">Ben&#39;s Guide to Cold Brew Coffee</h1>
-    <p>Cold brew is unequivocally the the best way to make and drink coffee.
-    It is easy to make, requires less equipment than other forms of coffee, and tastes less bitter than hot brewing methods.
-    Cold brew over ice is particularly excellent over the summer. 
-    Hot coffee on a 40 degree day is for masochists.</p>
-    <h2 id="1-brewing-cold-brew">1. Brewing Cold Brew</h2>
-    <p>It is extremely easy to over-think and over-complicate the brewing of cold brew.
-    In reality, it is just two simple steps:</p>
-    <ol>
-    <li>Put <strong>80 g/L</strong> of good coffee beans (ground as coarsely as possible) in some water, shake or stir, and then leave for <strong>12 - 24 hours</strong>.
-    Big Jars, iced tea jugs and french presses all make excellent brewing vessels.</li>
-    <li>Filter the coffee through cheese cloth (this is what i do), or a paper filter, or in a pinch any fabric, into a bottle and store in the fridge for up to two weeks.
-    The cold brew can then be served over ice, and i have found it goes well with a slice of orange (thanks Nika).</li>
-    </ol>
-    <p>The ratios, brew-times, bean types, and filtration methods can all be tweaked for personal preference.
-    I have yet to mess the recipe up to an extent that i have not wanted to drink the product.
-    My main word of caution would be on over brewing, this can make the coffee taste pretty bitter.</p>
-    <h2 id="2-nitro-cold-brew">2. Nitro Cold Brew</h2>
-    <p>If you are one of the fortunate few who have kegging gear and nitrogen gas you can turn your cold brew into nitro.
-    This makes the cold brew come out a bit like a stout, and adds a creamy texture.</p>
-    <ol>
-    <li>Put the cold brew into a keg, seal and pressurise to <strong>~40 psi</strong>.</li>
-    <li>Purge the air from the keg with at least three quick tugs on the release valve.
-    This should make the shelf life super long (not overly scientific, but i have never had a keg last long enough to check this).</li>
-    <li>Cool the keg down in a fridge for about a day.</li>
-    <li>Shake the keg for about 10 minutes at 40 psi to try and dissolve as much nitrogen gas as possible.
-    Nitrogen doesn&#39;t dissolve very well, so doing this while the keg is cold is a must (cold water dissolves gas better).</li>
-    <li>Ready to serve (also at 40 psi).
-    Serving through a stout nozzle is ideal, but whatever is fine.</li>
-    </ol>
-    <h2 id="3-caffeine-content-of-cold-brew-coffee">3. Caffeine Content of Cold Brew Coffee</h2>
-    <p>Note that all of this information was found from random blogs and would benefit with a tad more scientific rigour.
-    That said, who has the time for scientific rigour?
-    Who am i, some kind of scientist?</p>
-    <p>The caffeine content of cold brew depends on three parameters:</p>
-    <ol>
-    <li><p><strong>Bean caffeine content (B_c)</strong> primarily depends on the origin and species of the coffee beans.
-    Roast and grind can vary the content by a few percent, but this is essentially negligible.
-    Typical Araciba beans have a caffeine content of around <strong>1.2% by weight</strong>.</p>
-    </li>
-    <li><p><strong>Extraction efficiency (E)</strong> refers to the proportion of the bean&#39;s caffeine that is actually extracted during brewing, and depends on the brewing method.
-    The extraction method for hot brewing is around 90% and some random blog said that cold brewing was around 10% less efficient.
-    Thus, we will assume a cold brew extraction efficiency of around <strong>80%</strong>.</p>
-    </li>
-    <li><p><strong>Brew ratio (R)</strong> refers to the ratio of beans to water and can change a fair amount from person to person.
-    I use <strong>80g/L</strong> which corresponds to a ratio of 1:12.5.</p>
-    </li>
-    </ol>
-    <p>Thus the caffeine content of the cold brew can be estimated as the product of these factors:</p>
-    <blockquote>
-    <p>C = B_c <em> E </em> R = 1.2 <em> 10^-2 [g/g] </em> 0.8 <em> 80 [g/L] = 0.96% </em> 80 [g/L] = 768 mg/L</p>
-    </blockquote>
-    <p>Note, these calculations are consistent with a rule of thumb on reddit that the caffeine content is 1% of the dry coffee weight.</p>
-    <p>As a reference point, Red Bull has a caffeine content of around 320 mg/L, and a shot (30 mL) of coffee is around 64 mg.
-    Moral of the story: cold brew is strong, don&#39;t chug a litre of it.</p>
-</body>
+
+  </body>
 </html>
