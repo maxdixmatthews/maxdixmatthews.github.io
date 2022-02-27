@@ -58,7 +58,9 @@ let BookReviews =[
     "David Sedaris' diaries from 2003-2020. A funny insight into how Sedaris sees the world and goes about his life. I prefered his first collection of diaries, <i> <a style='color:black', href='https://www.hachette.com.au/david-sedaris/theft-by-finding-diaries-volume-one'>Theft By Finding</a></i>, as it had more of a story arc. I really liked the 2020 COVID bits. ",
     "A novel loosely based on the life of Elizabeth Taylor, and her 7 husbands. I didn't find it particularly gripping but a very easy to read book",
     "Another Sedaris book. It follows Sedaris' journey to quit smoking but makes great diversions through his family, travel, and his alcoholism. Another funny poignant collection of stories from Sedaris.",
-    "A very well known psychology book by the foremost pop psychologist. Gladwell interrogates many covert sources privilege, like your date of birth and class background. Some aspects need a revising as they have since been disproven."
+    "A very well known psychology book by the foremost pop psychologist. Gladwell interrogates many covert sources privilege, like your date of birth and class background. Some aspects need a revising as they have since been disproven.",
+    "A modernisation of Chomsky's <i>Manufacturing Consent</i>. The thesis is that media has a bias toward conflict to the detriment of real social issues. Some of the criticisms don't apply to Australia",
+    "A collection of Sedaris' diaries from 1977–2002. The book follows Sedaris' rise from methy kid to New York Times winning writer. Equal parts funny, sad, and unsettling. Definitely worth a read"
 ]
 
 function showBookRevs(){
