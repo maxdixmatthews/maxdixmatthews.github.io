@@ -176,52 +176,68 @@ function showCreateCardBox(){
 }
 
 function divMaker(text){
+    
     var div = document.createElement("div");
     var h2_question = document.createElement("h2");
     var h2_answer = document.createElement("h2");
     var speaker = document.createElement("i");
     var delCard = document.createElement("i")
     let flashcards = document.getElementById("flashcards");
-    var br1 = document.createElement("br")
-    var br2 = document.createElement("br")
-    var br3 = document.createElement("br")
+    var br1 = document.createElement("br");
+    var br2 = document.createElement("br");
+    var br3 = document.createElement("br");
 
     div.className = 'flashcard';
-    h2_question.setAttribute('style', "border-top: 1px solid black; padding: 15px; margin-top: 30px")
+    h2_question.setAttribute('style', "border-top: 1px solid black; padding: 15px; margin-top: 30px");
     h2_question.innerHTML = text[0];
-    h2_answer.setAttribute('style', "text-align: center; display:none; color:red");
+    h2_answer.setAttribute('style', "text-align: center; visibility:hidden; color:red");
     h2_answer.innerHTML = text[1];
 
-    delCard.className = "fa fa-close"
-    delCard.setAttribute('style',"position: relative; padding-bottom:95%; padding-left: 90%; color:red")
-    // delCard.setAttribute('onclick','deleteCard')
-
-    speaker.className = "fas fa-volume-up"; 
+    speaker.className = "fas fa-volume-up fa-lg"; 
     speaker.setAttribute('onclick','speakPls');
-    speaker.setAttribute('style', " position: relative; padding-left:90%");
+    // speaker.setAttribute('style', "position: relative; left:90%; top:90%");
+
+    delCard.className = "fa fa-close"
+    // delCard.setAttribute('style',"position: relative; padding-left: 90%; color:red")
+    // delCard.setAttribute('onclick','deleteCard')
 
     div.appendChild(h2_question);
     div.appendChild(h2_answer);
     div.appendChild(br1);
     div.appendChild(br2);
-    div.appendChild(delCard)
     div.appendChild(speaker)
+    div.appendChild(delCard)
+    
+    
     
 
     div.addEventListener("click", function(){
-        if(h2_answer.style.display == "none")
-            h2_answer.style.display = "block";
+        if(h2_answer.style.visibility == "hidden")
+            h2_answer.style.visibility = "visible";
         else 
-            h2_answer.style.display = "none";
+            h2_answer.style.visibility = "hidden";
 
     })
 
     speaker.addEventListener("click", function(){
+        if(h2_answer.style.visibility == "hidden")
+            h2_answer.style.visibility = "visible";
+        else 
+            h2_answer.style.visibility = "hidden";
         speakPls(text[1]);
+            
+        
     })
 
     delCard.addEventListener("click", function(){
-        remCardStorage(text);
+        if(h2_answer.style.visibility == "hidden")
+            h2_answer.style.visibility = "visible";
+        else 
+            h2_answer.style.visibility = "hidden";
+
+        display_text = '"'+text[0]+'"'
+        if(confirm("Would you like to delete " +display_text))
+            remCardStorage(text);
     })
 
     flashcards.appendChild(div);

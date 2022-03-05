@@ -455,6 +455,19 @@ p{
   }
   
   .flashcard h2{font-size: 1rem;}
+
+  /* palm card buttons */
+  .fa-volume-up{
+    position: relative; 
+    left:78%;
+    bottom:12%
+  }
+  .fa-close{
+    position: relative; 
+    left: 78%; 
+    bottom:10%;
+    color:red;
+  }
   
   @media screen and (max-width:1280px){
     .container{width: 100%;}
