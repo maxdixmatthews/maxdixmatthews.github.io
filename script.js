@@ -60,7 +60,29 @@ let BookReviews =[
     "Another Sedaris book. It follows Sedaris' journey to quit smoking but makes great diversions through his family, travel, and his alcoholism. Another funny poignant collection of stories from Sedaris.",
     "A very well known psychology book by the foremost pop psychologist. Gladwell interrogates many covert sources privilege, like your date of birth and class background. Some aspects need a revising as they have since been disproven.",
     "A modernisation of Chomsky's <i>Manufacturing Consent</i>. The thesis is that media has a bias toward conflict to the detriment of real social issues. Some of the criticisms don't apply to Australia",
-    "A collection of Sedaris' diaries from 1977–2002. The book follows Sedaris' rise from methy kid to New York Times winning writer. Equal parts funny, sad, and unsettling. Definitely worth a read"
+    "A collection of Sedaris' diaries from 1977–2002. The book follows Sedaris' rise from methy kid to New York Times winning writer. Equal parts funny, sad, and unsettling. Definitely worth a read",
+    "The fifth book in the Throne of Glass series. There was a lot of travel and coexisting plotlines. I found it a bit slower than the earlier book, but I enjoyed it a lot toward the end.",
+    "Tiny Fey’s autobiography, made up of a set of personal essays. You can tell she’s an accomplished comedy writer by how fast and funny the book reads.", 
+    "A funny set of essays written a little earlier than his other books I’ve read (2004). I didn’t think it flowed as well or was as funny as his newer books, but I still enjoyed it. The audiobook was nominated for a grammy, and worth listening to.", 
+    "I loved the writing and story of the book. Not an uplifting novel, but it was deep, and incredibly written. The fact that it was semi-autobiographical, and knowing the story of Silvia Plath, makes the book tragic.", 
+    "This was Sedaris’ first novel. The first half is fiction and the second half is non-fiction, hence the title of the book. I didn’t find it as funny as his later novels. I think his style got a lot more refined, but it was good to see how he started.",
+    "The book centred around Sedaris moving to Paris and trying to learn French. There was a lot about his younger more methy life that was unexpected and very funny.",
+    "An early collection of essay, by Sedaris. It felt shorter than his later novels and a little less engaging. My favourite parts were the stories about his younger life, like his essay A Plague of Tics.", 
+    "Another Sedaris book, he’s looking like my author of the year. This is his most recent one (written in 2022), and had some funny covid material.", 
+    "I found this to be my least favourite book of the series. It centred around Chaol, the least interesting main character (in my opinion). I don’t think it really added anything and I feel like it didn’t need to be part of the collection.", 
+    "A great courses audiobook about writing. I found parts of it interesting and she good advice on writing. There were bits that I didn’t find as useful, but there were lots of helpful writing strategies.", 
+    "The first piece of writing I’ve read by Woody Allen. He had a really funny and intricate way of writing. There were parts though that were creepy, and he goes into the allegations against him.", 
+    "An interesting and impressive book by Murakami, in his classic magic realism style. There were so many memorable stories and characters spread all over the novel. I loved the book.",
+    "A book on writing and the life of an author. I haven’t read Lemott before, her passion comes through strong in the book.",
+    "This is Murakami’s autobiography. It’s told through his obsession with running, and the way that helps and maps onto his writing. I found it interesting, weird, and unique and would recommend if you’re already interested in Murakami.",
+    "A novel that I thought paired well with The Windup Bird Chronicles. It had a more futuristic setting, and less fascinating characters, but both novels were fundamentally about the mind. The switching tenses and narrators made it a little tricky to read, but it was worth it.", 
+    "A non-fiction book about the Sarin gas attack on the underground train network in Japan in 1995. The first part is the story of the victims of the gas attack and the subsequent part is about the attackers. I learnt about the cult that did the attack, Aum Shinrikyo, and about Japanese culture in general.",
+    "A set of fictional short stories about animals. They were all funny and I could hear Sedaris’ voice throughout, but I’m not the biggest fan of short story collections.", 
+    "A parody of Metamorphosis by Kafka, where a man wakes up having turned into a large breast. I’ve never read Roth before. I found parts funny but mostly I didn’t love the story.", 
+    "A non-fiction book told through a young woman’s conversations with her therapist. It’s a very open and honest book with insights into mental illness. However, I was a little tired of the style by the end.", 
+    "The final book in the Throne of Glass series. I enjoyed the series as a whole, and really enjoyed the final third of this book. There was a lot of build up that needed to happen, and I got confused at who some of the characters were at some points."
+
+
 ]
 
 function showBookRevs(){
